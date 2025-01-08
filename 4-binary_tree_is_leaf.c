@@ -11,7 +11,7 @@
 int binary_tree_is_leaf(const binary_tree_t *node)
 {
 	/**
-	 *  Important to understand logic operators 
+	 *  Important to understand logic operators
 	 *  AND, OR, XOR, NOT
 	 */
 
