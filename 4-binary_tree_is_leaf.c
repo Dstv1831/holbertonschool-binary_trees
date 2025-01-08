@@ -10,6 +10,11 @@
 
 int binary_tree_is_leaf(const binary_tree_t *node)
 {
+	/**
+	 *  Important to understand logic operators 
+	 *  AND, OR, XOR, NOT
+	 */
+
 	if (node && !(node->left || node->right))
 		return (1);
 	else
