@@ -9,7 +9,7 @@
  * Return: The height of the tree. If tree is NULL, return 0.
  */
 
-int binary_tree_height(const binary_tree_t *tree)
+/** int binary_tree_height(const binary_tree_t *tree)
 {
 	int left_height, right_height;
 
@@ -21,6 +21,7 @@ int binary_tree_height(const binary_tree_t *tree)
 
 	return ((left_height > right_height ? left_height : right_height) + 1);
 }
+*/
 
 /**
  * binary_tree_is_perfect - checks if binary tree is perfect
