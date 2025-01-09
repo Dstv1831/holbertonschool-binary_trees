@@ -1,6 +1,5 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <math.h>
 #include "binary_trees.h"
 
 int binary_height(const binary_tree_t *tree);
@@ -54,7 +53,8 @@ int binary_tree_is_perfect(const binary_tree_t *tree)
 
 	height = binary_height(tree);
 	size = binary_size(tree);
-	result = (int)pow(2, height);
+	/* bitwise operation that is equal to pow(2, height)  */
+	result = (1 << height)
 
 	/* In a perfect binary tree, the number of nodes is (2^height - 1) */
 	return (size == (result - 1));
