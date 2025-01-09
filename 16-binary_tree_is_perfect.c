@@ -3,14 +3,14 @@
 #include <math.h>
 #include "binary_trees.h"
 
+int binary_height(const binary_tree_t *tree);
+int binary_size(const binary_tree_t *tree);
+
 /**
  * binary_height - measures the height of a binary tree.
  * @tree: pointer to the root node
  * Return: height of tree
  */
-
-int binary_height(const binary_tree_t *tree);
-int binary_size(const binary_tree_t *tree);
 
 int binary_height(const binary_tree_t *tree)
 {
@@ -54,7 +54,8 @@ int binary_tree_is_perfect(const binary_tree_t *tree)
 
 	height = binary_height(tree);
 	size = binary_size(tree);
+	result = pow(2, height);
 
 	/* In a perfect binary tree, the number of nodes is (2^height - 1) */
-	return (size == (pow(2, height) - 1));
+	return (size == (result - 1));
 }
