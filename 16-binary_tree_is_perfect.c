@@ -8,16 +8,19 @@
 
 int binary_tree_is_perfect(const binary_tree_t *tree)
 {
-	int left, right;
+    int left, right;
 
-	if (tree == NULL)
-		return (0);
+    if (tree == NULL)
+        return (1); // An empty tree is perfect by definition
 
-	if (tree->left == NULL && tree->right == NULL)
-		return (2);
+    if (tree->left == NULL && tree->right == NULL)
+        return (1); // A leaf node is a perfect subtree
 
-	left = binary_tree_is_perfect(tree->left);
-	right = binary_tree_is_perfect(tree->right);
-	return (left == right && ((left + right) % 2 == 0));
+    // Recursively check left and right subtrees
+    left = binary_tree_is_perfect(tree->left);
+    right = binary_tree_is_perfect(tree->right);
 
+    // Both subtrees must be perfect, and the heights must match
+    return (left == right && left != 0);
 }
+
